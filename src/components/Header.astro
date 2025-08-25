@@ -1,9 +1,21 @@
-<header class="py-4">
+<header class="py-4 flex space-between items-center w-fu">
   <h1>
-    <span class="font-sans font-bold text-md">onPoynt</span>
+    <span class="font-bold text-md">onPoynt</span>
     <span class="text-xs text-stone-500">&bull;</span>
-    <span class="font-sans text-sm text-stone-400">
-      capturing the everyday charm of Poynton
+    <span class="text-sm text-stone-400">
+      capturing the everyday of Poynton
     </span>
   </h1>
+
+  <button
+    id="add-class-btn"
+    class="text-md ml-auto rounded-full size-6 border-6 leading-none hover:border-12 transition-[border-width]"
+    >&nbsp;</button
+  >
 </header>
+
+<script>
+  document.getElementById('add-class-btn')?.addEventListener('click', () => {
+    document.body.classList.toggle('my-custom-class');
+  });
+</script>

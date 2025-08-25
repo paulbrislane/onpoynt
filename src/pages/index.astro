@@ -1,15 +1,29 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
-import Welcome from '../components/Welcome.astro';
+import Main from '../components/Main.astro';
+import { Picture } from 'astro:assets';
+import myImage from '../assets/photo/poynton-road-in-spring.jpg';
 ---
 
 <Layout>
   <Header />
-  <Welcome>
-    <!-- <h2 class="font-sans font-light text-base mx-auto leading-relaxed">
-      Capturing the everyday charm of Poynton — misty mornings, seasonal shifts,
-      and the little details you’d normally walk straight past.
-    </h2> -->
-  </Welcome>
+  <Main>
+    <div class="grid auto-cols-auto grid-flow-col col-gap-4xl">
+      <h2
+        class="font-serif font-light text-2xl leading-relaxed place-content-end text-pretty w-1/2"
+      >
+        Misty mornings, seasonal shifts, and the little details you’d normally
+        walk straight past.
+      </h2>
+
+      <Picture
+        src={myImage}
+        formats={['avif', 'webp']}
+        alt="A description of my image."
+        width="640"
+        class="rounded-sm ml-auto"
+      />
+    </div>
+  </Main>
 </Layout>
