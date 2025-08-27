@@ -2,14 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
 import Main from '../components/Main.astro';
-import { Picture } from 'astro:assets';
+import { Image } from 'astro:assets';
 import myImage from '../assets/photo/poynton-road-in-spring.jpg';
 ---
 
 <Layout>
   <Header />
   <Main>
-    <div class="grid auto-cols-auto grid-flow-col col-gap-4xl">
+    <div class="py-30 grid auto-cols-auto grid-flow-col col-gap-4xl">
       <h2
         class="font-serif font-light text-2xl leading-relaxed place-content-end text-pretty w-1/2"
       >
@@ -17,12 +17,14 @@ import myImage from '../assets/photo/poynton-road-in-spring.jpg';
         walk straight past.
       </h2>
 
-      <Picture
+      <Image
         src={myImage}
-        formats={['avif', 'webp']}
         alt="A description of my image."
-        width="640"
-        class="rounded-sm ml-auto"
+        width={480}
+        height={900}
+        class="mx-auto rounded-sm"
+        priority
+        format="avif"
       />
     </div>
   </Main>
